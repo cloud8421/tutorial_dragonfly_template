@@ -1,4 +1,4 @@
-<%= form_for @user, multipart: true do |f| %> 
+<%= simple_form_for @user, multipart: true do |f| %> 
 	<div class="row">
 		<div class="span4">
 			<div class="thumbnail">
@@ -10,15 +10,12 @@
 		</div>
 		<div class="span8">
 			<div class="well">
-				<%= f.label :first_name %>
-				<%= f.text_field :first_name %>
-				<%= f.label :last_name %>
-				<%= f.text_field :last_name %>
-				<%= f.label :email %>
-				<%= f.text_field :email %>
+				<%= f.input :first_name %>
+				<%= f.input :last_name %>
+				<%= f.input :email %>
 			</div>
 			<div class="form-actions">
-				<%= f.button 'Save', class: "btn btn-primary" %>
+				<%= f.submit 'Save', class: "btn btn-primary" %>
 			</div>
 		</div>
 	</div>
