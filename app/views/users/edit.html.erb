@@ -1,0 +1,25 @@
+<%= form_for @user, :multipart => true do |f| %> 
+	<div class="row">
+		<div class="span4">
+			<div class="thumbnail">
+				<img src="http://placehold.it/400x400&text=Super+cool+avatar" alt="Super cool avatar">
+				<div class="caption">
+					<%= file_field_tag :avatar %>
+				</div>
+			</div>
+		</div>
+		<div class="span8">
+			<div class="well">
+				<%= f.label :first_name %>
+				<%= f.text_field :first_name %>
+				<%= f.label :last_name %>
+				<%= f.text_field :last_name %>
+				<%= f.label :email %>
+				<%= f.text_field :email %>
+			</div>
+			<div class="form-actions">
+				<%= f.button 'Save', :class => "btn btn-primary" %>
+			</div>
+		</div>
+	</div>
+<% end %>

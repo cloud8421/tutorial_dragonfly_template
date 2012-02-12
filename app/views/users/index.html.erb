@@ -1,0 +1,18 @@
+<div class="row">
+	<div class="span12">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Avatar</th>
+					<th>First name</th>
+					<th>Last name</th>
+					<th>Email</th>
+				</tr>
+			</thead>
+			<tbody>
+				<%= render :partial => 'user_table', :collection => @users, :as => :user %>
+			</tbody>
+		</table>
+	</div>
+</div>
