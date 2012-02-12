@@ -9,7 +9,7 @@ describe UsersController do
     context "with valid ID" do
 
       before do
-        get :show, :id => user.id
+        get :show, id: user.id
       end
 
       it "should be success" do
@@ -25,7 +25,7 @@ describe UsersController do
     context "with invalid ID" do
 
       before do
-        get :show, :id => 999
+        get :show, id: 999
       end
 
       it "should redirect to the root path" do
@@ -45,7 +45,7 @@ describe UsersController do
     context "with valid ID" do
 
       before do
-        get :edit, :id => user.id
+        get :edit, id: user.id
       end
 
       it "should be success" do
@@ -61,7 +61,7 @@ describe UsersController do
     context "with invalid ID" do
 
       before do
-        get :edit, :id => 999
+        get :edit, id: 999
       end
 
       it "should redirect to the root path" do
@@ -83,7 +83,7 @@ describe UsersController do
       context "with invalid DATA" do
 
         before do
-          put :update, :id => user.id, :user => { :email => '' }
+          put :update, id: user.id, user: { email: '' }
         end
 
         it "should render the edit page" do
@@ -99,7 +99,7 @@ describe UsersController do
       context "with valid DATA" do
 
         before do
-          put :update, :id => user.id, :user => { :email => 'brand_new_email@example.com' }
+          put :update, id: user.id, user: { email: 'brand_new_email@example.com' }
         end
 
         it "should render the show page" do
@@ -117,7 +117,7 @@ describe UsersController do
     context "with invalid ID" do
 
       before do
-        put :update, :id => 999
+        put :update, id: 999
       end
 
       it "should redirect to the root path" do

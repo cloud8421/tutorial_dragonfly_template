@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-	before_filter :get_user, :only => [:show, :edit]
+	before_filter :get_user, only: [:show, :edit]
 
 	def index
 		@users = User.all

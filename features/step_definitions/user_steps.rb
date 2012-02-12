@@ -1,5 +1,5 @@
 Given /^a user exists with email "([^"]*)"$/ do |email|
-	Factory(:user, :email => email)
+	Factory(:user, email: email)
 end
 
 Given /^I am on the home page$/ do
@@ -15,7 +15,7 @@ When /^I follow "([^"]*)"$/ do |name|
 end
 
 When /^I follow "([^"]*)" for "([^"]*)"$/ do |link_name, email|
-	page.find('tr', :text => email).click_link(link_name)
+	page.find('tr', text: email).click_link(link_name)
 end
 
 Then /^I should be on (.+)$/ do |page|
@@ -28,7 +28,7 @@ Given /^I am on the profile page for "([^"]*)"$/ do |email|
 end
 
 When /^I change my email with "([^"]*)"$/ do |email|
-	fill_in :email, :with => email
+	fill_in :email, with: email
 end
 
 Then /^I should see "([^"]*)"$/ do |content|

@@ -15,7 +15,7 @@ describe User do
 
 	context "attributes" do
 
-		let(:user) { Factory(:user, :first_name => "John", :last_name => "Doe") }
+		let(:user) { Factory(:user, first_name: "John", last_name: "Doe") }
 
 		it "should have a name attribute" do
 			user.should respond_to(:name)
